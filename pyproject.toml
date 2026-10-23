@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "strands-bedrock-preflight"
+version = "0.1.0"
+description = "Pre-flight availability and multi-provider resilience guard for AWS Bedrock and the Strands Agents SDK."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "LedgerGuard Open Source Team", email = "oss@ledgerguard.dev" }
+]
+keywords = ["aws", "bedrock", "strands", "agents", "resilience", "preflight", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "boto3>=1.34.0",
+    "strands-agents>=1.50.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+]
